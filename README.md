@@ -12,11 +12,9 @@ Hacer uso de la API y extraer todos los personajes de la página 1 a la 21. Para
 
 API: [Rickandmorty](https://rickandmortyapi.com/documentation)
 
-=> ​https://rickandmortyapi.com/api/character?page=n
+​https://rickandmortyapi.com/api/character?page=n
 
 Donde "n" es el número de página.
-
-Acciones:
 
 Funcionalidad:
 
