@@ -14,7 +14,7 @@ API: [Rickandmorty](https://rickandmortyapi.com/documentation)
 
 => ​https://rickandmortyapi.com/api/character?page=n
 
-Donde "1" es el número de página.
+Donde "n" es el número de página.
 
 Acciones:
 
