@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Lista de Personajes</h1>
+<button type="button" class="btn btn-dark"><a href="{{ url_for('bp_personaje.insertar') }}">Generar BD</a></button>
+<br>
+<br>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th hidden>id</th>
+                <th>imagen</th>
+                <th>name</th>
+                <th>status</th>
+                <th>especie</th>
+                <th>genero</th>
+                <th>Visualizar</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for personaje in personajes %}
+            <tr>
+                <td hidden>{{ personaje.id }}</td>
+                <td><img src="{{ personaje.image }}" alt="" style="width: 100px;"></td>
+                <td>{{ personaje.name }}</td>
+                <td>{{ personaje.status }}</td>
+                <td>{{ personaje.species }}</td>
+                <td>{{ personaje.gender }}</td>
+                <td>
+                    <button type="button" class="btn btn-outline-danger"><a
+                            href="{{ url_for('bp_personaje.perfil', id=personaje.id) }}">Perfil</a></button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

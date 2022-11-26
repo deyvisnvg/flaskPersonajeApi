@@ -1,0 +1,18 @@
+{% extends "base.html"%}
+{% block content %}
+<form action="{{url_for('bp_personaje.insertar')}}" method="post">
+    <div class="card" style="width: 100vw; height: 80vh; text-align: center; margin-top: 100px;">
+        <h2>Generar BD - API de Rick and Morty</h2>
+        <br><br>
+        <div>
+            Cantidad Paginas:<br>
+            <input type="number" name="cantidad_pages" placeholder="Ingrese cantidad de paginas a consumir"
+                style="border: 1px solid gray; border-radius: 5px; padding: 10px; width: 300px;">
+        </div>
+        <br><br>
+        <button type=" submit" class="btn btn-primary btn-lg"><strong>Iniciar</strong></button>
+        <br><br>
+        <div><a href="{{url_for('bp_personaje.index')}}">regresar</a></div>
+    </div>
+</form>
+{% endblock %}
